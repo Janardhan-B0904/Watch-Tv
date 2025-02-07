@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import { useState, useEffect } from 'react';
 import SkeletonScreen from '../components/Skeleton';
+import HomeContent from '@/components/HomeContent';
 
 const Home: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,7 @@ const Home: React.FC = () => {
       <Head>
         <title>Home - My Next App</title>
       </Head>
-      {loading ? <SkeletonScreen /> : <h1>Welcome to the Home Page!</h1>}
+      {loading ? <SkeletonScreen /> : <HomeContent/>}
     </Layout>
   );
 };
